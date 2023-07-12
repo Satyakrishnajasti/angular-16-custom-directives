@@ -3,6 +3,8 @@ import {
   ElementRef,
   HostBinding,
   HostListener,
+  Input,
+  OnInit,
   inject,
 } from '@angular/core';
 
@@ -10,7 +12,7 @@ import {
   selector: '[appCustom]',
   standalone: true,
 })
-export class CustomDirective {
+export class CustomDirective implements OnInit {
   protected element = inject(ElementRef);
   @HostBinding('style.color') color!: string;
   @HostBinding('style.border-color') borderColor!: string;
@@ -33,9 +35,10 @@ export class CustomDirective {
     this.element.nativeElement.style.fontSize = '20px';
   }
 
+  @Input({ required: true }) randomNum!: number;
+
   @HostListener('click') click() {
     const colorPick = Math.floor(Math.random() * this.possibleColors.length);
-
     this.color = this.borderColor = this.possibleColors[colorPick];
   }
 
@@ -89,4 +92,10 @@ export class CustomDirective {
   // @HostListener('reset') reset() {
   //   alert('reset');
   // }
+
+  ngOnInit(): void {
+    if (this.randomNum % 2 == 0) {
+      this.color = 'green';
+    }
+  }
 }

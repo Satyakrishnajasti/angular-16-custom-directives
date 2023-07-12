@@ -42,56 +42,56 @@ export class CustomDirective implements OnInit {
     this.color = this.borderColor = this.possibleColors[colorPick];
   }
 
-  // @HostListener('mouseover') onHover() {
-  //   this.element.nativeElement.style.cursor = 'pointer';
-  // }
+  @HostListener('mouseover') onHover() {
+    this.element.nativeElement.style.cursor = 'pointer';
+  }
 
-  // @HostListener('mouseout') mouseOut() {
-  //   alert('Mouse out');
-  // }
+  @HostListener('mouseout') mouseOut() {
+    alert('Mouse out');
+  }
 
-  // @HostListener('mousedown') mouseDown() {
-  //   alert('Mouse Down');
-  // }
+  @HostListener('mousedown') mouseDown() {
+    alert('Mouse Down');
+  }
 
-  // @HostListener('mouseup') mouseUp() {
-  //   alert('Mouse up');
-  // }
+  @HostListener('mouseup') mouseUp() {
+    alert('Mouse up');
+  }
 
-  // @HostListener('mousemove') mouseMove() {
-  //   alert('Mouse Move');
-  // }
+  @HostListener('mousemove') mouseMove() {
+    alert('Mouse Move');
+  }
 
-  // @HostListener('keypress') keyPress() {
-  //   alert('Keypress');
-  // }
+  @HostListener('keypress') keyPress() {
+    alert('Keypress');
+  }
 
-  // @HostListener('keyup') KeyUp() {
-  //   alert('KeyUp');
-  // }
+  @HostListener('keyup') KeyUp() {
+    alert('KeyUp');
+  }
 
-  // @HostListener('input') input() {
-  //   alert('input');
-  // }
+  @HostListener('input') input() {
+    alert('input');
+  }
 
-  // @HostListener('keydown') KeyDown() {
-  //   alert('KeyDown');
-  // }
-  // @HostListener('focus') focus() {
-  //   this.element.nativeElement.style.color = 'blue';
-  // }
+  @HostListener('keydown') KeyDown() {
+    alert('KeyDown');
+  }
+  @HostListener('focus') focus() {
+    this.element.nativeElement.style.color = 'blue';
+  }
 
-  // @HostListener('change') change() {
-  //   alert('Change');
-  // }
+  @HostListener('change') change() {
+    alert('Change');
+  }
 
-  // @HostListener('blur') blur() {
-  //   alert('blur');
-  // }
+  @HostListener('blur') blur() {
+    alert('blur');
+  }
 
-  // @HostListener('reset') reset() {
-  //   alert('reset');
-  // }
+  @HostListener('reset') reset() {
+    alert('reset');
+  }
 
   ngOnInit(): void {
     if (this.randomNum % 2 == 0) {
